@@ -1,8 +1,8 @@
-# 🐦 SolTwitter - Decentralized Twitter on Solana
+# 🐦 Solana-twitter-dapp -- Decentralized Twitter on Solana
 
 A beautiful, fully-functional Twitter clone built on the Solana blockchain using Anchor framework and React.
 
-![SolTwitter Banner](https://img.shields.io/badge/Solana-Twitter-blue?style=for-the-badge&logo=solana)
+![Solana-twitter-dapp Banner](https://img.shields.io/badge/Solana-Twitter-blue?style=for-the-badge&logo=solana)
 
 ## ✨ Features
 
@@ -43,7 +43,7 @@ A beautiful, fully-functional Twitter clone built on the Solana blockchain using
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/soltwitter.git
+git clone https://github.com/yourusername/solana-twitter-dapp.git
 cd soltwitter
 ```
 
@@ -89,7 +89,7 @@ Navigate to `http://localhost:5173`
 ## 🏗️ Project Structure
 
 ```
-soltwitter/
+solana-twitter-dapp/
 ├── programs/
 │   └── twitter-dapp/
 │       └── src/
@@ -149,8 +149,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **Twitter**: [@yourtwitter](https://twitter.com/yourtwitter)
+- **GitHub**: (https://github.com/0307)
+- **Twitter**: (https://x.com/rammsey_rs)
 
 ---
 
