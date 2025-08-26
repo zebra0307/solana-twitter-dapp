@@ -4,7 +4,7 @@ A beautiful, fully-functional Twitter clone built on the Solana blockchain using
 
 ![Solana-twitter-dapp Banner](https://img.shields.io/badge/Solana-Twitter-blue?style=for-the-badge&logo=solana)
 
-## ✨ Features
+## ✨ Features 
 
 - 🔗 **Decentralized**: Built on Solana blockchain
 - 💙 **Twitter-like UI**: Authentic Twitter design and user experience  
