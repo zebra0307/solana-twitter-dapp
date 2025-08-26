@@ -1,0 +1,34 @@
+.anchor
+.DS_Store
+target
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+
+# Frontend build files
+my-twitter-frontend/dist
+my-twitter-frontend/build
+my-twitter-frontend/.vite
+my-twitter-frontend/.env
+my-twitter-frontend/.env.local
+my-twitter-frontend/.env.production
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+package-lock.json
+yarn.lock

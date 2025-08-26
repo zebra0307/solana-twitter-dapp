@@ -1,0 +1,273 @@
+{
+  "address": "FbzSKvffw1VKoqyTPJjZxQrd2mkXS43P96t3vKNhezEU",
+  "metadata": {
+    "name": "twitter_dapp",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "delete_tweet",
+      "discriminator": [
+        58,
+        240,
+        206,
+        92,
+        160,
+        186,
+        211,
+        87
+      ],
+      "accounts": [
+        {
+          "name": "tweet",
+          "writable": true
+        },
+        {
+          "name": "author",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "tweet"
+          ]
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "like_tweet",
+      "discriminator": [
+        248,
+        27,
+        137,
+        254,
+        228,
+        130,
+        141,
+        149
+      ],
+      "accounts": [
+        {
+          "name": "tweet",
+          "writable": true
+        },
+        {
+          "name": "liker",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "send_tweet",
+      "discriminator": [
+        179,
+        213,
+        79,
+        165,
+        123,
+        247,
+        82,
+        109
+      ],
+      "accounts": [
+        {
+          "name": "tweet",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "author",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "topic",
+          "type": "string"
+        },
+        {
+          "name": "content",
+          "type": "string"
+        },
+        {
+          "name": "parent",
+          "type": {
+            "option": "pubkey"
+          }
+        },
+        {
+          "name": "retweet_of",
+          "type": {
+            "option": "pubkey"
+          }
+        }
+      ]
+    },
+    {
+      "name": "unlike_tweet",
+      "discriminator": [
+        159,
+        25,
+        203,
+        17,
+        255,
+        246,
+        249,
+        100
+      ],
+      "accounts": [
+        {
+          "name": "tweet",
+          "writable": true
+        },
+        {
+          "name": "liker",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "update_tweet",
+      "discriminator": [
+        244,
+        144,
+        101,
+        90,
+        185,
+        30,
+        89,
+        242
+      ],
+      "accounts": [
+        {
+          "name": "tweet",
+          "writable": true
+        },
+        {
+          "name": "author",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "tweet"
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "new_topic",
+          "type": "string"
+        },
+        {
+          "name": "new_content",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Tweet",
+      "discriminator": [
+        229,
+        13,
+        110,
+        58,
+        118,
+        6,
+        20,
+        79
+      ],
+      "size": 1092
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Unauthorized",
+      "msg": "You are not authorized to perform this action."
+    },
+    {
+      "code": 6001,
+      "name": "AlreadyLiked",
+      "msg": "Tweet already liked by this user."
+    },
+    {
+      "code": 6002,
+      "name": "TooManyLikers",
+      "msg": "Too many likers (limit reached)."
+    },
+    {
+      "code": 6003,
+      "name": "NotLiked",
+      "msg": "Tweet not yet liked by this user."
+    },
+    {
+      "code": 6004,
+      "name": "TopicTooLong",
+      "msg": "Topic too long (max 50 chars)."
+    },
+    {
+      "code": 6005,
+      "name": "ContentTooLong",
+      "msg": "Content too long (max 280 chars)."
+    }
+  ],
+  "types": [
+    {
+      "name": "Tweet",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "author",
+            "type": "pubkey"
+          },
+          {
+            "name": "topic",
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "type": "string"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "likes_count",
+            "type": "u32"
+          },
+          {
+            "name": "likers",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "parent",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "retweet_of",
+            "type": {
+              "option": "pubkey"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
